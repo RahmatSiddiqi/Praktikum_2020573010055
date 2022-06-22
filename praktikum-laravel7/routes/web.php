@@ -33,3 +33,7 @@ Route::get('admin', function () {
 });
 
 Route::get('mahasiswa', [MahasiswaController::class, 'index']);
+
+Route::get('/cek-object', [MahasiswaController::class, 'cekObject']);
+
+Route::get('/insert', [MahasiswaController::class, 'insert']);

@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/upload', [AlbumController::class, 'upload']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/album', [AlbumController::class, 'index']);
 Route::get('/beranda', [BerandaController::class, 'index']);
@@ -27,4 +25,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [BerandaController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
